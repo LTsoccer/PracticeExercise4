@@ -18,7 +18,8 @@ namespace PracticeExercise4
 
         public T Peek()
         {
-            throw new NotImplementedException();
+            T topOfStack = linkedList.Last.Value;
+            return topOfStack;
         }
 
         public T Pop()
