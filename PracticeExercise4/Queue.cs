@@ -44,11 +44,16 @@ namespace PracticeExercise4
         {
             string result = "<Back> ";
 
+        public override string ToString()
+        {
+            string result =  "<Back> ";
+
             var currentNode = linkedList.Last;
             while (currentNode != null)
             {
                 result += currentNode.Value;
                 if (currentNode.Previous != null)
+                if(currentNode.Previous != null)
                 {
                     result += " → ";
                 }

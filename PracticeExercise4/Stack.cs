@@ -45,10 +45,15 @@ namespace PracticeExercise4
             string result = "";
             var currentNode = linkedList.Last;
             while (currentNode != null)
+
+            var currentNode = linkedList.Last;
+
+            while( currentNode != null)
             {
                 result += currentNode.Value + "\n";
                 currentNode = currentNode.Previous;
             }
+
             return result;
         }
     }
