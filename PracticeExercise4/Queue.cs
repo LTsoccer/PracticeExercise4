@@ -40,9 +40,6 @@ namespace PracticeExercise4
             linkedList.AddLast(item);
         }
 
-        public override string ToString()
-        {
-            string result = "<Back> ";
 
         public override string ToString()
         {

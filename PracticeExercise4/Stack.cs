@@ -43,8 +43,6 @@ namespace PracticeExercise4
         public override string ToString()
         {
             string result = "";
-            var currentNode = linkedList.Last;
-            while (currentNode != null)
 
             var currentNode = linkedList.Last;
 
