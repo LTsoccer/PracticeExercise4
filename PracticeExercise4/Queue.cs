@@ -13,9 +13,21 @@ namespace PracticeExercise4
 
         }
 
-        public T First => linkedList.First.Value;
+        public T First {
+            get {
+                if (IsEmpty) { throw new EmptyQueueException(); }
+                else { return linkedList.First.Value; }
+            }
+        }
 
-        public T Last => linkedList.Last.Value;
+        public T Last
+        {
+            get
+            {
+                if (IsEmpty) { throw new EmptyQueueException(); }
+                else { return linkedList.Last.Value; }
+            }
+        }
 
         public bool IsEmpty => linkedList.Count == 0;
 

@@ -18,6 +18,10 @@ namespace PracticeExercise4
 
         public T Peek()
         {
+            if (IsEmpty)
+            {
+                throw new EmptyStackException();
+            }
             T topOfStack = linkedList.Last.Value;
             return topOfStack;
         }

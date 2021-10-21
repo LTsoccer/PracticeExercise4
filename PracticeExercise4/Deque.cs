@@ -9,9 +9,23 @@ namespace PracticeExercise4
         {
             linkedList = new LinkedList<T>();
         }
-        public T Front => linkedList.First.Value;
+        public T Front
+        {
+            get
+            {
+             if (IsEmpty) { throw new EmptyQueueException(); }
+                    else { return linkedList.First.Value; }
+            }
+        }
 
-        public T Back => linkedList.Last.Value;
+        public T Back
+        {
+            get
+            {
+                if (IsEmpty) { throw new EmptyQueueException(); }
+                else { return linkedList.Last.Value; }
+            }
+        }
 
         public bool IsEmpty => linkedList.Count == 0;
 
@@ -53,6 +67,28 @@ namespace PracticeExercise4
         public void AddBack(T item)
         {
             linkedList.AddLast(item);
+        }
+
+        public override string ToString()
+        {
+            string result = "<Back> ";
+
+            var currentNode = linkedList.Last;
+            while (currentNode != null)
+            {
+                result += currentNode.Value;
+                if (currentNode.Previous != null)
+                    if (currentNode.Previous != null)
+                    {
+                        result += " → ";
+                    }
+                currentNode = currentNode.Previous;
+            }
+
+            result += " <Front>";
+
+
+            return result;
         }
     }
 }
